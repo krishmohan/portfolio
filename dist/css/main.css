@@ -118,7 +118,7 @@ body {
 
 main {
   padding: 1rem 2rem;
-  height: calc(100% - 60px); }
+  height: 100%; }
 
 main#home {
   overflow: hidden;
@@ -193,34 +193,24 @@ a {
     grid-area: job2;
     grid-column: 3/5; }
 
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
-  height: 60px;
-  margin-top: auto; }
-
-main#contact {
-  height: calc(100vh - 60px); }
-  main#contact .contact-infos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 5rem; }
-    main#contact .contact-infos .info {
-      font-size: 2rem;
-      border: 3px #fff solid;
-      padding: 1.5rem 2.5rem;
-      margin-bottom: 2rem;
-      transition: all 0.5s ease-out; }
-      main#contact .contact-infos .info:hover {
-        padding: 0.5rem 1.5rem;
-        background: #eece1a;
+main#contact .contact-infos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem; }
+  main#contact .contact-infos .info {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease-out; }
+    main#contact .contact-infos .info:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #000; }
+      main#contact .contact-infos .info:hover span {
         color: #000; }
-        main#contact .contact-infos .info:hover span {
-          color: #000; }
 
 @media screen and (max-width: 768px) {
   main {
