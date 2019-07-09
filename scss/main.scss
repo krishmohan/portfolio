@@ -26,7 +26,7 @@ body {
 
 main {
 	padding: 1rem 2rem;
-	height: calc(100% - 60px);
+	height: 100%;
 }
 
 //home section
@@ -141,20 +141,9 @@ a {
 	}
 }
 
-#main-footer {
-	text-align: center;
-	padding: 1rem;
-	background: darken($primary-color, 10);
-	color: set-text-color($primary-color);
-	height: 60px;
-	margin-top: auto;
-}
-
-
 // Contact page
 
 main#contact {
-	height: calc(100vh - 60px);
 
 	.contact-infos {
 		display: flex;
