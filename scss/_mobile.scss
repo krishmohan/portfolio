@@ -1,0 +1,85 @@
+//Wide screens
+@include mediaXl {}
+
+//Desktop & Laptop screens
+@include mediaLg {}
+
+//Tablet & Small Laptop screens
+@include mediaMd {
+    main {
+        align-items: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    main#home {
+        text-align: center;
+    }
+
+    main#about {
+      .about-info {
+          grid-template-columns: 1fr;
+          grid-template-areas: 
+          'portrait'
+          'bio-info'
+          'job1'
+          'job2';
+          .portrait,
+          .bio-info, .job {
+              grid-column: 1;
+          }
+
+          .bio-info {
+              text-align: center;
+          }
+      }
+    }
+
+    header {
+        .menu {
+
+            &-branding,
+            &-nav {
+                float: none;
+                width: 100%;
+                min-height: 0;
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            &-nav {
+                height: 75vh;
+                transform: translate3d(-100%, 0, 0);
+
+                .nav-item>.nav-link {
+                    font-size: 26px;
+                }
+            }
+
+            &-branding {
+                height: 25vh;
+                transform: translate3d(100%, 0, 0);
+
+                .portrait {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+        }
+    }
+}
+
+//Smartphone screens
+@include mediaSm {
+    main#home {
+        .lg-heading {
+            margin-top: 10vh;
+        }
+    }
+}
