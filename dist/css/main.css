@@ -125,8 +125,13 @@ main#home {
   padding: 4rem; }
   main#home h1 {
     margin-top: 20vh; }
+  main#home .skills {
+    padding: 0 2rem;
+    font-size: 1.2rem; }
+    main#home .skills span {
+      color: #eece1a; }
   main#home .icons {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
     main#home .icons a {
       padding: 0.4rem;
       color: #fff; }
@@ -212,7 +217,65 @@ main#contact .contact-infos {
       main#contact .contact-infos .info:hover span {
         color: #000; }
 
+main#my-works .projects {
+  margin: 3rem 0;
+  flex-direction: column;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); }
+  main#my-works .projects .card {
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+    background-image: url("../img/url-shortener-bg.png");
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px; }
+    main#my-works .projects .card .inner-card {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 6px 14px black;
+      background: #515151;
+      position: absolute;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .5s ease-out;
+      transform: translateY(80%); }
+      main#my-works .projects .card .inner-card:hover {
+        transform: translateY(0%); }
+      main#my-works .projects .card .inner-card .heading h3 {
+        margin: 14px 0;
+        color: #eece1a; }
+      main#my-works .projects .card .inner-card .actions {
+        display: flex; }
+        main#my-works .projects .card .inner-card .actions .link {
+          margin-right: 10px; }
+          main#my-works .projects .card .inner-card .actions .link i {
+            font-size: 1.2rem;
+            padding: 0 4px; }
+          main#my-works .projects .card .inner-card .actions .link a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem; }
+          main#my-works .projects .card .inner-card .actions .link:hover i,
+          main#my-works .projects .card .inner-card .actions .link:hover a {
+            color: #eece1a;
+            transition: all 0.5s ease-out; }
+
+@media screen and (min-width: 1171px) {
+  main#my-works .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main#my-works .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
 @media screen and (max-width: 768px) {
+  main#my-works .projects {
+    grid-template-columns: 1fr; }
   main {
     align-items: center; }
     main .lg-heading {
@@ -224,7 +287,8 @@ main#contact .contact-infos {
     grid-template-columns: 1fr;
     grid-template-areas: 'portrait' 'bio-info' 'job1' 'job2'; }
     main#about .about-info .portrait,
-    main#about .about-info .bio-info, main#about .about-info .job {
+    main#about .about-info .bio-info,
+    main#about .about-info .job {
       grid-column: 1; }
     main#about .about-info .bio-info {
       text-align: center; }
@@ -248,4 +312,6 @@ main#contact .contact-infos {
 
 @media screen and (max-width: 500px) {
   main#home .lg-heading {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  main#my-works .projects {
+    grid-template-columns: 1fr; } }

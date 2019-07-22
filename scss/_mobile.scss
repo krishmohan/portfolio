@@ -1,11 +1,30 @@
 //Wide screens
-@include mediaXl {}
+@include mediaXl {
+    main#my-works {
+        .projects {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
 
 //Desktop & Laptop screens
-@include mediaLg {}
+@include mediaLg {
+    main#my-works {
+        .projects {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
 
 //Tablet & Small Laptop screens
 @include mediaMd {
+
+    main#my-works {
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+
     main {
         align-items: center;
 
@@ -20,22 +39,24 @@
     }
 
     main#about {
-      .about-info {
-          grid-template-columns: 1fr;
-          grid-template-areas: 
-          'portrait'
-          'bio-info'
-          'job1'
-          'job2';
-          .portrait,
-          .bio-info, .job {
-              grid-column: 1;
-          }
+        .about-info {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'portrait'
+                'bio-info'
+                'job1'
+                'job2';
 
-          .bio-info {
-              text-align: center;
-          }
-      }
+            .portrait,
+            .bio-info,
+            .job {
+                grid-column: 1;
+            }
+
+            .bio-info {
+                text-align: center;
+            }
+        }
     }
 
     header {
@@ -80,6 +101,12 @@
     main#home {
         .lg-heading {
             margin-top: 10vh;
+        }
+    }
+
+    main#my-works {
+        .projects {
+            grid-template-columns: 1fr;
         }
     }
 }
